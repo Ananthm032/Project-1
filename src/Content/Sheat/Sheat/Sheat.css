@@ -1,0 +1,38 @@
+.sheat{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    border-radius:4px ;
+    background: #FFFFFF;
+    
+}
+.bat{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+  
+}
+.coin{
+    font-size: 14px;
+    font-family:imported ;
+  }
+.bit{
+    font-family:imported ;
+    font-size: 18px;
+
+}
+.btsheat{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.tpsheat img{
+  width: 200px;
+  height: 200px;
+  border-radius:5px ;
+ 
+}

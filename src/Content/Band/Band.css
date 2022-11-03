@@ -1,0 +1,267 @@
+.scrool-1{
+    width: 100%;
+    background: linear-gradient(135deg, #EEEEEE 47.92%, #F6F6F6 60.42%, #EEEEEE 72.92%);
+    height:100%;
+    overflow: hidden;
+    overflow-y: scroll;
+   
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.top1{
+    font-family:imported ;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+}
+.top button{
+    background: #D3E5FE;
+    border-radius: 40px;
+    color: #1236AA;
+    padding: 3px 22px;
+    font-family:imported ;
+    font-weight: bold;
+}
+.simple1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:  #8C93A3;;
+}
+.simple2{
+   text-align: initial;
+   font-family:imported ;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   margin-top: 10px;
+}
+.date{
+    display: flex;
+    align-items: center;
+   margin-left: auto;
+   font-style: normal;
+font-weight: 500;
+font-size: 20px;
+font-family:imported ;
+}
+
+.buc1{
+    border: 8px solid #EEEEEE;
+     
+}
+.buc2{
+    border: 8px solid #EEEEEE;
+     
+}
+.tap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+.tap1{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+.tap button{
+    background: #D3E5FE;
+border-radius: 40px;
+color: #1236AA;
+padding: 3px 22px;
+font-family:imported ;
+font-weight: bold;
+}
+.sim1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: imported;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:  #8C93A3;;
+}
+.sim2{
+    text-align: initial;
+   font-family: imported;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   margin-top: 10px;
+}
+.link{
+    display: flex;
+    align-items: flex-start;
+ flex-direction: column;
+ margin: 10px 0px;
+ line-height: 50px;
+}
+.mail{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+}
+.mail h5{
+    font-family:imported ;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+margin-top: -10px;
+color: #598CF4;
+}
+.mail h4{
+    font-family:imported ;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+color: #8C93A3;
+
+left: auto;
+}
+   .twitter{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+         
+   }
+   .twitter h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+    
+   }
+   .twitter h5{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .insta{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+          
+   }
+   .insta h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .insta h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .dribble{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+          
+   }
+   .dribble h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .dribble h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .behance{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+   }
+   .behance h4{
+   
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .behance h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .Nama{
+    display: flex;
+    align-items: center;
+   margin-left: auto;
+   font-style: normal;
+font-weight: 500;
+font-size: 20px;
+font-family:imported ;
+   }
+  .hiii{
+    width: 100%;
+    height:80vh;
+ 
+  }
+  .top1 .sk{
+    width: 250px;
+    height: 25px;
+  }
+  .tap1 .sk1{
+    width: 250px;
+    height: 25px;
+  }
+ @media  screen and (max-width:420px) {
+    .tap button{
+    padding: 3px 6px;
+    }
+    .top button{
+        padding: 3px 6px;
+    }
+    .top1 .sk{
+     width:100px ;
+     height: 25px;
+    }
+    .tap1 .sk1{
+        width: 100px;
+        height: 25px;
+      }
+     
+}

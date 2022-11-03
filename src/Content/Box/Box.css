@@ -1,0 +1,245 @@
+
+
+.scro{
+    width: 100%;
+    background-color: #DBDBDB;
+    height:100%;
+    overflow: hidden;
+    overflow-y: scroll;
+   
+}
+.to{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.to1{
+    font-family:imported ;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+}
+.to button{
+    background: #FFE3D6;
+border-radius: 40px;
+color: #7A0933;
+padding: 3px 22px;
+font-family:imported ;
+font-weight: bold;
+}
+.simp1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:  #8C93A3;;
+}
+.simp2{
+   text-align: initial;
+   font-family:imported ;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   margin-top: 10px;
+}
+.de{
+    display: flex;
+    align-items: center;
+   margin-left: auto;
+   font-style: normal;
+font-weight: 500;
+font-size: 20px;
+font-family:imported ;
+}
+
+.bu1{
+    border:8px solid #EEEEEE ;
+ 
+}
+.bu{
+    border: 8px solid #EEEEEE
+
+}
+.ta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+.ta1{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+.ta button{
+    background: #FFE3D6;
+    border-radius: 40px;
+    color: #7A0933;
+    padding: 3px 22px;
+    font-family:imported ;
+    font-weight: bold;
+}
+.si1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:  #8C93A3;;
+}
+.si2{
+    text-align: initial;
+    font-family:imported ;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   margin-top: 10px;
+}
+.lin{
+    display: flex;
+    align-items: flex-start;
+ flex-direction: column;
+ margin: 10px 0px;
+ line-height: 50px;
+}
+.mai{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+}
+.mai h5{
+    font-family:imported ;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+margin-top: -10px;
+color: #598CF4;
+}
+.mai h4{
+    font-family:imported ;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+color: #8C93A3;
+
+left: auto;
+}
+   .twitte{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+         
+   }
+   .twitte h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+    
+   }
+   .twitte h5{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .inst{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+          
+   }
+   .inst h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .inst h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .dribbl{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+          
+   }
+   .dribbl h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .dribbl h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .behanc{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+   }
+   .behanc h4{
+   
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .behanc h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .Na{
+    display: flex;
+    align-items: center;
+   margin-left: auto;
+   font-style: normal;
+font-weight: 500;
+font-size: 20px;
+font-family:imported ;
+   }
+  .hi{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, #EEEEEE 47.92%, #F6F6F6 60.42%, #EEEEEE 72.92%);
+  }
+  

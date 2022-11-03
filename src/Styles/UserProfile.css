@@ -1,0 +1,69 @@
+.ttp1{
+    height: 33.2vh;
+   
+}
+.botm1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+     height: 42vh;
+    
+}
+.address1{
+   
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(135deg, #EEEEEE 47.92%, #F6F6F6 60.42%, #EEEEEE 72.92%);
+}
+.lowe1{
+    width: 100%;
+    height: 8vh;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+  
+   
+}
+
+.wrapper {
+    display: inline-flex;
+    background: #313131;
+    height: 40px;
+    width: 180px;
+    font-family:imported ;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+   margin-left: 23px;
+   border: 2px solid #313131;
+  }
+  .wrapper .option {
+    background: #313131;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+   
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input#one:checked ~ .option-1,
+  input#two:checked ~ .option-2 {
+    background: #717171;
+    border-color: #717171;
+  }
+  input#one:checked ~ .option-1 span,
+  input#two:checked ~ .option-2 span {
+    color: #fff;
+  }
+  .wrapper .option span {
+    font-size: 18px;
+    font-weight: 400;
+    font-family:imported ;
+  }

@@ -1,0 +1,71 @@
+.ttp{
+    height: 40vh;
+    width: 100%;
+}
+.botm2{
+     display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 46vh;
+    
+}
+.address{
+   
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(135deg, #EEEEEE 47.92%, #F6F6F6 60.42%, #EEEEEE 72.92%);
+    
+}
+
+.pa{
+    font-size: 12px;
+    font-weight: 400;
+    font-family:imported ;
+    color: aliceblue;
+}
+.boton{
+ 
+    border: 2px solid #313131;
+    background:#313131;
+     border-radius: 4px;
+     margin-left: 25px;
+}
+.wrapper {
+    display: inline-flex;
+    background: #313131;
+    height: 40px;
+    width: 180px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+   margin-left: 23px;
+   border: 2px solid #313131;
+  }
+  .wrapper .option {
+    background: #313131;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    border-radius: 5px;
+
+    transition: all 0.5s ease;
+   
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input#one:checked ~ .option-1,
+  input#two:checked ~ .option-2 {
+    background: #717171;
+    border-color: #717171;
+  }
+  input#one:checked ~ .option-1 span,
+  input#two:checked ~ .option-2 span {
+    color: #fff;
+  }
+  .wrapper .option span {
+    font-size: 20px;
+  }

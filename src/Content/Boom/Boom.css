@@ -1,0 +1,243 @@
+
+.scrool{
+    width: 100%;
+    background-color: #DBDBDB;
+    height:100%;
+    overflow: hidden;
+    overflow-y: scroll;
+   
+}
+.tope{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.tope1{
+    font-family:imported ;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+}
+.tope button{
+    background: #EBFCD5;
+    border-radius: 40px;
+    color: #0D6008;
+    padding: 3px 22px;
+    font-family:imported ;
+    font-weight: bold;  
+}
+.simplee1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:  #8C93A3;;
+}
+.simplee2{
+   text-align: initial;
+   font-family:imported ;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   margin-top: 10px;
+}
+.dete{
+    display: flex;
+    align-items: center;
+   margin-left: auto;
+   font-style: normal;
+font-weight: 500;
+font-size: 20px;
+font-family:imported ;
+}
+
+.buc1{
+    border:8px solid  #EEEEEE  ;
+     
+}
+.buc{
+    border:8px solid #EEEEEE  ;
+     
+}
+.tape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+.tape1{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+.tape button{
+    background: #EBFCD5;
+border-radius: 40px;
+color: #0D6008;
+padding: 3px 22px;
+font-family:imported ;
+font-weight: bold;
+}
+.sime1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:  #8C93A3;;
+}
+.sime2{
+    text-align: initial;
+    font-family:imported ;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   margin-top: 10px;
+}
+.linke{
+    display: flex;
+    align-items: flex-start;
+ flex-direction: column;
+ margin: 10px 0px;
+ line-height: 50px ;
+}
+.maile{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+}
+.maile h5{
+    font-family:imported ;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+margin-top: -10px;
+color: #598CF4;
+}
+.maile h4{
+    font-family:imported ;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+color: #8C93A3;
+
+left: auto;
+}
+   .twittere{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+         
+   }
+   .twittere h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+    
+   }
+   .twittere h5{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .instae{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+          
+   }
+   .instae h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .instae h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .dribblee{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+          
+   }
+   .dribblee h4{
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .dribblee h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .behancee{
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       justify-content: flex-start;
+   }
+   .behancee h4{
+   
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C93A3;
+   }
+   .behancee h5{
+    display: flex;
+    font-family:imported ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    margin-top: -10px;
+    color: #598CF4;
+   }
+   .Nam{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-style: normal;
+    font-weight: 500;
+   font-size: 20px;
+   font-family:imported ;
+   }
+  .hii{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, #EEEEEE 47.92%, #F6F6F6 60.42%, #EEEEEE 72.92%);
+  }

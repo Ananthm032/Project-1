@@ -1,0 +1,13 @@
+
+#d3demo{
+	width: 80%;
+	height: 300px;
+     
+}
+@media screen and (max-width:840px) {
+    #d3demo{
+        width: 50vh;
+        height: 36vh;
+        margin-left: 20%;
+    }
+}
