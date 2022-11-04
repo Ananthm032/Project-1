@@ -1,12 +1,7 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-
-import Typography from '@mui/material/Typography';
+import Backdrop from '@mui/material/Backdrop';
+import {Typography, Box} from '@mui/material';
 import "./Comment.css"
-
-
-
 
 
 const style = {
@@ -18,34 +13,35 @@ const style = {
   bgcolor: 'background.paper',
   border: '0.5px solid ',
  border:'white',
- borderRadius:'20px',
+ borderRadius:'10px',
   boxShadow: 24,
   p: 4,
 };
 
-export default function KeepMountedModal() {
+export default function SimpleBackdrop() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
 
   return (
     <div>
-      
+        
    <Box className='button'>
    <hp>Accepted</hp>
    
- <hq onClick={handleOpen}>Rejected</hq>
+ <hq onClick={handleToggle}>Rejected</hq>
  
  </Box>
-      
-      <Modal
-        keepMounted
+      <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={open}
-        onClose={handleClose}
-        aria-labelledby="keep-mounted-modal-title"
-        aria-describedby="keep-mounted-modal-description"
+        onClick={handleClose}
       >
-         <Box sx={style}>
+       <Box sx={style}>
           <Typography id="keep-mounted-modal-title" variant="h6" component="h2" textAlign="center">
           Reation Of Rejection
           </Typography>
@@ -55,11 +51,11 @@ export default function KeepMountedModal() {
         </form>
        
           <Typography id="keep-mounted-modal-description" sx={{ mt: 50, alignContent:"center",justifyContent:"center"}}>
-      <h1>Submit</h1>
+         
           </Typography>
          
         </Box>
-      </Modal>
+      </Backdrop>
     </div>
   );
 }
