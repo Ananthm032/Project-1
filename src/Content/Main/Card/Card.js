@@ -2,13 +2,13 @@ import React from 'react'
 import {Box, Button} from "@mui/material"
 import Img5 from "../../../components/Images/anime cartton.png"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-
+import {Link} from "react-router-dom"
 import "./Card.css"
 function Card() {
   
   return (
  
-    <a href='./user/address' style={{textDecoration:'none',textDecorationColor:'none'}}>
+    <Link to='/user/address' style={{textDecoration:'none',textDecorationColor:'none'}}>
     
     <Box className="card">
      <Box className='ver'>
@@ -32,7 +32,7 @@ function Card() {
      </Box>
    </Box>
   
-   </a>
+   </Link>
  
   
   )
