@@ -5,7 +5,7 @@ import { Box } from '@mui/material'
 import CheckCircle from '@mui/icons-material/CheckCircle'
 function Sheat() {
   return (
-  <a href="/users/profile" style={{textDecoration:'none'}}> <Box className="sheat">
+  <a href="/user/profile" style={{textDecoration:'none'}}> <Box className="sheat">
        <Box className="tpsheat">
           <img src="https://wallpapercave.com/wp/WgGibpD.jpg" alt='sht' />
        </Box>

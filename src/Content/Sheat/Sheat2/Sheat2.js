@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Sheat2.css"
-
 import {Box} from '@mui/material';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -11,12 +10,13 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Sheat2() {
+
   return (
    <Box className="total">
     <Box className="backi">
      <Box className="tpp" >
       <Box className="password">
-     <a href="/users/address"> <KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></a>
+      <a href="/user/address"> <KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></a>
       </Box>
     
     </Box>

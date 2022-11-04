@@ -11,12 +11,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function Sheat1() {
+
   return (
    <Box className="total1">
     <Box className="backi1">
     <Box className="tpp-1" >
       <Box className="password">
-     <a href="/about"> <KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></a>
+    <a href='/user'><KeyboardBackspaceIcon sx={{color:'whitesmoke'}} /></a>
       </Box>
     
     </Box>
