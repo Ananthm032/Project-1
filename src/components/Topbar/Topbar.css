@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: imported;
+  src: url(../Font/Satoshi-Variable.ttf);
+}
   .header {
       display: flex;
       height:9.5vh;

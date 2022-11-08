@@ -4,7 +4,7 @@ import "./Sheat1.css"
 import {Box} from '@mui/material';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import FacebookIcon from '@mui/icons-material/Facebook';
-
+import { Link } from 'react-router-dom';
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -17,7 +17,7 @@ function Sheat1() {
     <Box className="backi1">
     <Box className="tpp-1" >
       <Box className="password">
-    <a href='/user'><KeyboardBackspaceIcon sx={{color:'whitesmoke'}} /></a>
+    <Link to='/user'><KeyboardBackspaceIcon sx={{color:'whitesmoke'}} /></Link>
       </Box>
     
     </Box>

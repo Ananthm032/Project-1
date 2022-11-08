@@ -8,7 +8,7 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import {Link} from "react-router-dom"
 function Sheat2() {
 
   return (
@@ -16,7 +16,7 @@ function Sheat2() {
     <Box className="backi">
      <Box className="tpp" >
       <Box className="password">
-      <a href="/user/address"> <KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></a>
+      <Link to="/user/address"> <KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></Link>
       </Box>
     
     </Box>
@@ -29,10 +29,10 @@ function Sheat2() {
           <Box className='bv11'>
           <Box className='bv011'>
           <Box  className="bv111">Jevanantham</Box>
-        <Box className='bv112'>Heloo</Box>
+        <Box className='bv112'>ARTIST</Box>
          
          </Box>
-         <Box sx={{fontSize:18,color:'#795548'}}>@jeva132</Box>
+         <Box sx={{fontSize:18,color:'white'}}>@jeva132</Box>
          </Box>
          <Box className='bv12'>
 

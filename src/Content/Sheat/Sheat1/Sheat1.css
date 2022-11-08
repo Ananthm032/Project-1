@@ -52,9 +52,13 @@
      display: flex;
      flex-direction: column;
      justify-content: center;
-     margin-left: 10px;
+     padding: 10px;
      object-fit: cover;
     gap:5px;
+ }
+ .bv-11{
+ 
+   line-height: 30px;
  }
  .bv121{
     display: flex;
@@ -75,18 +79,17 @@
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
  }
- .bv-11{
-    line-height: 30px;
- }
+
  .bv-111{
    font-size: 46px;
-   color:rgb(105, 35, 45);
-   font-weight: 700;
+   color:rgb(255, 255, 255);
+   font-weight: 500;
  }
  .bv-112{
    font-size: 18px;
-   color:rgb(19, 16, 16);
-   font-weight: 700;
+   color:rgb(255, 255, 255);
+   font-weight: 500;
+  
  }
  .social{
     padding: 5px 5px 3px 5px;

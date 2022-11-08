@@ -1,3 +1,10 @@
+@font-face {
+  font-family: imported;
+  src: url(./components/Font/Satoshi-Variable.ttf);
+}
+
+
+
 *{
     margin:0;
     padding:0;
@@ -17,6 +24,7 @@
     width: 100%;
     transition: all 0.5s;
    border-right: 2px solid #DBDBDB;
+   font-family: imported;
   }
   .top_section{
     display: flex;
@@ -27,6 +35,7 @@
   }
   .logo{
     font-size: 30px;
+    font-family: imported;
   }
   .bars{
     display: flex;

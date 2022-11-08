@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import CheckCircle from '@mui/icons-material/CheckCircle'
 function Sheat() {
   return (
-  <Link to="/user/profile" style={{textDecoration:'none'}}> <Box className="sheat">
+  <Link to="/user/profile" style={{textDecoration:'none'}} className="no"> <Box className="sheat">
        <Box className="tpsheat">
           <img src="https://wallpapercave.com/wp/WgGibpD.jpg" alt='sht' />
        </Box>

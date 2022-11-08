@@ -39,10 +39,10 @@ export default function SimpleBackdrop() {
       <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={open}
-        onClick={handleClose}
+        
       >
        <Box sx={style}>
-          <Typography id="keep-mounted-modal-title" variant="h6" component="h2" textAlign="center">
+          <Typography id="keep-mounted-modal-title" variant="h6" component="h2" textAlign="center" color="black">
           Reation Of Rejection
           </Typography>
           <form>
@@ -53,7 +53,7 @@ export default function SimpleBackdrop() {
           <Typography id="keep-mounted-modal-description" sx={{ mt: 50, alignContent:"center",justifyContent:"center"}}>
          
           </Typography>
-         
+         <h1 onClick={handleClose} style={{color:"black"}}>Click</h1>
         </Box>
       </Backdrop>
     </div>

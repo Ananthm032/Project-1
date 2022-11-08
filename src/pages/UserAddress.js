@@ -10,10 +10,10 @@ function UserAddress() {
     </div>
     
     <div className='botm2'>
-      <Sheat/>
-      <Sheat/>
-      <Sheat/>
-      <Sheat/>
+      <Sheat />
+      <Sheat />
+      <Sheat />
+      <Sheat />
       
     </div>
   </div>
