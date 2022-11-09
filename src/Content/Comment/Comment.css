@@ -72,3 +72,13 @@
     justify-content: center;
      
 }
+.Button{
+   background-color: rgb(54, 140, 220);
+   color: rgb(47, 52, 57);
+   width: 15%;
+   border-radius: 10px;
+   padding: 5px;
+   text-align: center;
+   cursor: pointer;
+   margin-left: 400px;
+}

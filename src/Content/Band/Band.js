@@ -7,34 +7,42 @@ import { Box, Button} from '@mui/material';
 import Skeleton from '@mui/material/Skeleton';
 import Comment from "../Comment/Comment"
 import "./Band.css"
+
+
+import { useQuery, gql } from "@apollo/client";
+
+const FILMS_QUERY = gql`
+  {
+    launchesPast(limit:10) {
+      id
+      mission_name
+    }
+  }
+`;
 export default function ControlledAccordions() {
     const [expanded, setExpanded] = React.useState(false);
 
      const handleChange = (panel) => (event, isExpanded) => {
       setExpanded(isExpanded ? panel : false);
     };
-    const [data, setData] = useState([]);
+    const { data, loading, error } = useQuery(FILMS_QUERY);
     const [Loading,SetLoading]=useState(true)
     useEffect(() => {
-     
-      (async () => {
-        const res = await fetch('https://jsonplaceholder.typicode.com/users');
-        console.log(res);
-        const data = await res.json();
-        setData(data.splice(2,5));
-         setTimeout(()=>{
+      setTimeout(()=>{
         SetLoading(false);
       },5000)
-      })();
-    }, [3]);
-  
+    },5000)
+    if (loading)
+ 
+  return;
+  if (error) return <pre>{error.message}</pre>
 
   return (
     <div  className='scrool-1'>
       <div className='hiii'>
      
-       {data.map(item=> (
-     <div  key={item.id.value}>
+       {data.launchesPast.map((launch) => (
+     <div  key={launch.id}>
         <Box className='buc1'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
@@ -51,7 +59,7 @@ export default function ControlledAccordions() {
             {Loading ?     <Skeleton className='sk' 
           
           />  :
-        <p>{item.name}</p>
+        <p>{launch.id}</p>
           }
         
            </Box>
@@ -77,7 +85,7 @@ export default function ControlledAccordions() {
             width={40}
             height={40}
             />  :
-          <p>{item.username}</p>
+          <p>{launch.mission_name}</p>
           
           }
   </Box>
@@ -90,7 +98,7 @@ export default function ControlledAccordions() {
             width={200}
             height={25}
             />  :
-          <p>{item.address.street}</p>
+          <p>{launch.mission_name}</p>
             }
           
         
@@ -129,7 +137,7 @@ export default function ControlledAccordions() {
          
             />  :
          
-  <p>{item.address.suite}</p>
+  <p>{launch.mission_name}</p>
         }
         </Box>
           </Box>
@@ -152,7 +160,7 @@ height={15}
             width={40}
             height={40}
             />  :
-          <p>{item.address.zipcode}</p>
+          <p>{launch.id}</p>
           
           }
       </Box>
@@ -190,7 +198,6 @@ https://www.instagram.com/kalsdkmfklasmdklfmklsadmfklmlaksfmklmsdklfmksdmlf
    <h4>BEHANCE HANDLE</h4>
    <h5 >https://www.behance.net/gallery/119045577/DE_FORM?tracking_source=for_you_feed_featured_category</h5>
    </Box>
-   
    </Box>
    <Comment/>
   </AccordionDetails>
