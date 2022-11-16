@@ -31,6 +31,7 @@
 .boat1{
    
     display: flex;
+    align-items: center;
     flex-direction: row;
     margin-left: 25px;
  }
@@ -58,7 +59,7 @@
  }
  .bv-11{
  
-   line-height: 30px;
+   line-height: 32px;
  }
  .bv121{
     display: flex;

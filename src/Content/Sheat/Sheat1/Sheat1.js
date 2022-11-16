@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Sheat1.css"
-
 import {Box} from '@mui/material';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -10,12 +9,18 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-function Sheat1() {
+import { useParams } from 'react-router-dom'
 
+function Sheat1(props) {
+ 
+const Params =useParams()
+const userID =Params.userID
+   
   return (
    <Box className="total1">
-    <Box className="backi1">
-    <Box className="tpp-1" >
+  
+  <Box className="backi1" >
+    <Box className="tpp-1">
       <Box className="password">
     <Link to='/user'><KeyboardBackspaceIcon sx={{color:'whitesmoke'}} /></Link>
       </Box>
@@ -24,17 +29,18 @@ function Sheat1() {
     <Box className="btt-1">
        <Box className="boat1">
           <Box className="bv">
-           <img src="https://pre00.deviantart.net/27d4/th/pre/i/2013/202/1/7/aqua___realm_of_darkness_by_arxami-d6egi5y.jpg" alt='nam'  />
+          <img src="https://pre00.deviantart.net/27d4/th/pre/i/2013/202/1/7/aqua___realm_of_darkness_by_arxami-d6egi5y.jpg" alt='nam'  />
          </Box>
          <Box className="bv-1">
           <Box className='bv-11'>
             
            <Box>
-         <Box  className="bv-111">Jevanantham</Box>
-        
-          
+         <Box  className="bv-111">ko
+
          </Box>
-         <Box className="bv-112">@jeva132</Box>
+        
+         </Box>
+         <Box className="bv-112">{userID}</Box>
          </Box>
          <Box className='bv12'>
 
@@ -65,6 +71,7 @@ function Sheat1() {
         </Box>
           </Box>
             </Box>
+         
               </Box>
   )
 }

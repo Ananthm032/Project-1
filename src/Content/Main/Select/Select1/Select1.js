@@ -1,32 +1,24 @@
 import React, { useState } from 'react';
 import Select from "react-select"
 import "./Select1.css"
+
 function Select1() {
+ 
   const data = [
     {
       value: 1,
-      label: "UserId"
+      label: "UserID"
     },
     {
       value: 2,
-      label: "UserId1"
+      label: "WalletAddress"
     },
     {
       value: 3,
-      label: "UserId2"
+      label: "DisplayName"
     },
-    {
-      value: 4,
-      label: "UserId3"
-    },
-    {
-      value: 5,
-      label: "UserId4"
-    },
-    {
-      value: 6,
-      label: "UserId5"
-    }
+    
+  
   ];
 
   const [selectedOption, setSelectedOption] = useState(null);
@@ -65,10 +57,14 @@ function Select1() {
       };
     },
   };
+
+  
   return (
     <div >
      
+     
 
+  
       <Select
        className="App"
         placeholder="UserID"
@@ -76,10 +72,10 @@ function Select1() {
         options={data} 
         onChange={handleChange}
         styles={ColorStyles}
-        
         />
       
       
+
     </div>
   );
 }

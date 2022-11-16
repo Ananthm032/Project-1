@@ -1,56 +1,70 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import FormControl from '@mui/material/FormControl';
+import { styled, alpha } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
-
-
-const BootstrapInput = styled(InputBase)(({ theme }) => ({
-  'label + &': {
-    marginTop: theme.spacing(0),
+import SearchIcon from '@mui/icons-material/Search';
+import { Outlet,useSearchParams } from 'react-router-dom';
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  '& .MuiInputBase-input': {
-    borderRadius: 4,
-    position: 'relative',
+  marginLeft: -25,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
     
-    border: '2px solid rgba(178, 183, 194, 1)',
-    fontSize: 16,
-    marginLeft:-8,
-    padding: '4px 26px 10px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:focus': {
-      borderRadius: 4,
-      "&::placeholder": {
-        fontWeight: 400,
+    width: 'auto',
+    border:"2px solid rgba(178, 183, 194, 1)",
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '16ch',
       },
-     
     },
   },
 }));
 
-export default function CustomizedSelects() {
-  const [age, setAge] = React.useState('');
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+export default function SearchAppBar() {
+  const [searchParams,setSearchParams]=useSearchParams()
   return (
-    <div>
-      <FormControl sx={{ m: 1, }} variant="standard" >
-      
-        <BootstrapInput id="demo-customized-textbox" placeholder='Typing somthing...'/>
-      </FormControl>
-      
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+    
+        <Toolbar>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase onClick={() =>setSearchParams({ filter :'active'})}
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+        </Toolbar>
+     
+    </Box>
   );
 }
+

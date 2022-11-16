@@ -4,9 +4,12 @@
 }
 .botm1{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-     height: 42vh;
+    flex-wrap: wrap;
+     overflow: hidden;
+     overflow-y: scroll;
+      gap: 20px;
+      justify-content: center;
+      height: 42vh;
     
 }
 .address1{

@@ -9,16 +9,25 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import {Link} from "react-router-dom"
-function Sheat2() {
 
-  return (
-   <Box className="total">
+
+
+function Sheat2(props) {
+  
+  return (  
+   <Box className="total"> 
+   
+
+   
     <Box className="backi">
      <Box className="tpp" >
+     
       <Box className="password">
-      <Link to="/user/address"> <KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></Link>
-      </Box>
+     
+       <Link to={"/user/address/useraddress"}><KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></Link> 
     
+      </Box>
+   
     </Box>
     <Box className="btt">
        <Box className="boat">
@@ -32,7 +41,7 @@ function Sheat2() {
         <Box className='bv112'>ARTIST</Box>
          
          </Box>
-         <Box sx={{fontSize:18,color:'white'}}>@jeva132</Box>
+         <Box sx={{fontSize:18,color:'white'}}>@jeva</Box>
          </Box>
          <Box className='bv12'>
 
@@ -61,8 +70,11 @@ function Sheat2() {
         <Box className='social'><TwitterIcon/></Box>
         <Box className='social'><LinkedInIcon/></Box>
         </Box>
+   
           </Box>
+             
             </Box>
+   
               </Box>
   )
 }

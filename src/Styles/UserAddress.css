@@ -4,10 +4,13 @@
 }
 .botm2{
      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 40vh;
-    
+     flex-wrap: wrap;
+     overflow: hidden;
+     overflow-y: scroll;
+      gap: 20px;
+      justify-content: center;
+      height: 50vh;
+      
 }
 
 .address{

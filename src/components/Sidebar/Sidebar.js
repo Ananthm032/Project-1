@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import AccessibilityNew from "@mui/icons-material/AccessibilityNew";
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import HomeIcon from '@mui/icons-material/Home';
+import PieChartIcon from '@mui/icons-material/PieChart';
+import Person4Icon from '@mui/icons-material/Person4';
+import DehazeIcon from '@mui/icons-material/Dehaze';
+import CloseIcon from '@mui/icons-material/Close';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { NavLink } from 'react-router-dom';
 
@@ -11,21 +13,25 @@ import { NavLink } from 'react-router-dom';
 const Side = ({children}) => {
     const[isOpen ,setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
+    const [menuCollapse, setMenuCollapse] = useState(true)
+    const menuIconClick = () => {
+     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+  };
     const menuItem=[
         {
             path:"/",
             name:"Home",
-            icon:<AccessibilityNew/>
+            icon:<HomeIcon/>
         },
         {
             path:"/analytic",
             name:"Ananlytic",
-            icon:<AccountBoxIcon/>
+            icon:<PieChartIcon/>
         },
         {
          path:"/user",
             name:"Users",
-            icon:<AccountCircleIcon/>
+            icon:<Person4Icon/>
         },
         {
             path:"/comment",
@@ -47,9 +53,16 @@ const Side = ({children}) => {
         <div className="container">
            <div   style={{width: isOpen ? "250px" : "50px"}}  className="sidebar">
                <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo"> Application</h1>
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo"> APPLICATION</h1>
                    <div style={{marginLeft: isOpen ? "20px" : "5px"}} className="bars">
-                       <AddShoppingCartIcon onClick={toggle}/>
+                   <div className="closemenu" onClick={menuIconClick}>
+            
+            {menuCollapse ? (
+              <DehazeIcon onClick={toggle}/>
+            ) : (
+              <CloseIcon onClick={toggle}/>
+            )}
+          </div>
                    </div>
                </div>
                {

@@ -13,9 +13,12 @@ import { useQuery, gql } from "@apollo/client";
 
 const FILMS_QUERY = gql`
   {
-    launchesPast(limit:10) {
+    getAllUsers{
+      username
+      displayName
+      userID
       id
-      mission_name
+      
     }
   }
 `;
@@ -31,7 +34,7 @@ export default function ControlledAccordions() {
       setTimeout(()=>{
         SetLoading(false);
       },5000)
-    },5000)
+    })
     if (loading)
  
   return;
@@ -41,7 +44,7 @@ export default function ControlledAccordions() {
     <div  className='scrool-1'>
       <div className='hiii'>
      
-       {data.launchesPast.map((launch) => (
+       {data.getAllUsers.map((launch) => (
      <div  key={launch.id}>
         <Box className='buc1'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -85,7 +88,7 @@ export default function ControlledAccordions() {
             width={40}
             height={40}
             />  :
-          <p>{launch.mission_name}</p>
+          <p>{launch.username}</p>
           
           }
   </Box>
@@ -98,7 +101,7 @@ export default function ControlledAccordions() {
             width={200}
             height={25}
             />  :
-          <p>{launch.mission_name}</p>
+          <p>{launch.userID}</p>
             }
           
         
@@ -137,7 +140,7 @@ export default function ControlledAccordions() {
          
             />  :
          
-  <p>{launch.mission_name}</p>
+  <p>{launch.username}</p>
         }
         </Box>
           </Box>
