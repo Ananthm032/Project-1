@@ -4,7 +4,7 @@ import Img5 from "../../../components/Images/anime cartton.png"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import "./Card.css";
 
-function Card(props) {
+function Card(Props) {
   
   return (
      
@@ -18,7 +18,7 @@ function Card(props) {
          <Box className='name'>
          
          
-          <Box>{props.user.displayName}</Box>
+          <Box>{Props.user.displayName}</Box>
           
          </Box>
          <Box className='simble'>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import CheckCircle from '@mui/icons-material/CheckCircle'
 
 
-function Sheat(props) {
+function Sheat() {
 
    
   
@@ -17,7 +17,7 @@ function Sheat(props) {
        </Box>
        <Box className='btsheat'>
           <Box className='bat'>
-         <Box  className='bit'>CrossClub</Box>
+         <Box  className='bit'>Cross Club</Box>
          <Box><CheckCircle   sx={{color:'#F5C15F'}}/></Box>
           </Box>
           <Box  className='coin'>Croc#1304</Box>

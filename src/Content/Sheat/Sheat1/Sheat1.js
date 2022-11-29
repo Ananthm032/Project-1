@@ -11,14 +11,15 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useParams } from 'react-router-dom'
 
-function Sheat1(props) {
+function Sheat1(Props) {
  
 const Params =useParams()
-const userID =Params.userID
-   
+const displayName =Params.displayName
+
   return (
    <Box className="total1">
   
+    
   <Box className="backi1" >
     <Box className="tpp-1">
       <Box className="password">
@@ -33,14 +34,17 @@ const userID =Params.userID
          </Box>
          <Box className="bv-1">
           <Box className='bv-11'>
-            
+       
            <Box>
-         <Box  className="bv-111">ko
-
+         <Box  className="bv-111">
+         {displayName}
          </Box>
         
          </Box>
-         <Box className="bv-112">{userID}</Box>
+         <Box className="bv-112">
+       Hello
+     
+          </Box>
          </Box>
          <Box className='bv12'>
 
@@ -71,7 +75,8 @@ const userID =Params.userID
         </Box>
           </Box>
             </Box>
-         
+      
+        
               </Box>
   )
 }

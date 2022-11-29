@@ -1,9 +1,12 @@
 import React from 'react'
-import Sheat from '../Content/Sheat/Sheat/Sheat'
+
 import Sheat1 from '../Content/Sheat/Sheat1/Sheat1'
 import "../Styles/UserAddress.css"
-import { useQuery,gql } from '@apollo/client';
-
+import { useLazyQuery,gql } from '@apollo/client';
+import { Box } from '@mui/material'
+import { Link } from 'react-router-dom'
+import CheckCircle from '@mui/icons-material/CheckCircle'
+import Sheat from '../Content/Sheat/Sheat/Sheat';
 const JIO_QUERY = gql `
 {
   getAllUsers{
@@ -19,7 +22,7 @@ const JIO_QUERY = gql `
 
 function UserAddress() {
    
-  const { data, loading, error } = useQuery(JIO_QUERY);
+  const { data, loading, error } = useLazyQuery(JIO_QUERY);
   console.log("useraddress",data,loading,error)
 
   
@@ -30,20 +33,16 @@ function UserAddress() {
            <div className="ttp">
 
 
-  <Sheat1>{}</Sheat1>
+  <Sheat1/>
 
   </div>
  
-    <div className='botm2'>
-
-    {data?.getAllUsers?.map((user) =>{
-        return   <Sheat user={user}></Sheat>
-
-    })}
-
+    <div className='botm2' >
+<Sheat/>
       </div>
-       
+        
     </div>
+  
   </div>
   )
 }

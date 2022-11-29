@@ -9,22 +9,34 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import {Link} from "react-router-dom"
+import { useQuery, gql } from "@apollo/client";
 
+const HELL_QUERY = gql`
+  {
+    getAllUsers{
+      displayName
+      userID
+      username
+      id
+    }
+    
+   
+  }
+`;
 
+function Sheat2(node) {
+  const { data, loading, error } = useQuery(HELL_QUERY);
 
-function Sheat2(props) {
-  
+  console.log("about",data,loading,error)
   return (  
    <Box className="total"> 
-   
-
-   
     <Box className="backi">
      <Box className="tpp" >
      
       <Box className="password">
-     
-       <Link to={"/user/address/useraddress"}><KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></Link> 
+   
+   <Link to ={`/user/address/${node.displayName}`}><KeyboardBackspaceIcon sx={{color:'whitesmoke'}}/></Link>
+
     
       </Box>
    
