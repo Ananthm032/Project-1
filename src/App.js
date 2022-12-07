@@ -11,6 +11,7 @@ import ProductList from './pages/ProductList.js';
 import Topbar from './components/Topbar/Topbar';
 import UserAddress from './pages/UserAddress';
 import UserProfile from './pages/UserProfile';
+import { RoutingContext } from './Content/Routing/Routing';
 
 
 const App = () => {
@@ -22,16 +23,16 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />}/>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/user" element={<UserPage />} />
           <Route path="/comment" element={<Comment />} />
           <Route path="/analytic" element={<Analytics />} />
           <Route path="/product" element={<Product />} />
-          <Route path="/user/address/:userID" element={<UserAddress />} />
+          <Route path="/user" element={<UserPage />} />
+          <Route path="/user/address/:walletAddress" element={<UserAddress />} />
           <Route path="/user/profile" element={<UserProfile />} />
           <Route path="/productList" element={<ProductList />} />
         </Routes> 
      </Sidebar>
-
+    
 
       </>
   );

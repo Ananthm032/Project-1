@@ -70,3 +70,161 @@
     font-weight: 400;
     font-family:imported ;
   }
+  .sheat{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 275px;
+    border-radius:4px ;
+    background: #FFFFFF;
+    
+}
+
+.bat{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+  
+}
+.coin{
+    font-size: 14px;
+    font-family:imported ;
+  }
+.bit{
+    font-family:imported ;
+    font-size: 18px;
+
+}
+.btsheat{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.tpsheat img{
+  width: 200px;
+  height: 200px;
+  border-radius:5px ;
+ 
+}
+
+
+.total{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 33vh;
+ 
+}
+.tpp{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+ 
+}
+.password{
+ padding: 5px 5px 0px 5px;
+ background-color: rgb(84, 80, 80);
+ border-radius: 50%;
+ margin-left: 20px;
+}
+.btt{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  width: 100%;
+  height: 23vh;
+  font-family:imported ;
+  
+}
+
+.boat{
+ 
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 25px;
+}
+.bv img{
+  border-radius: 50%;
+}
+.boat11{
+  display: flex;
+  width: 20%;
+  height: 20vh;
+  flex-direction: row;
+ align-items: center;
+ justify-content: space-evenly;
+
+}
+.bv1{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    padding: 10px;
+   object-fit: cover;
+  gap:5px;
+}
+.bv11{
+
+ line-height: 30px;
+}
+.bv121{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.backi{
+  width: 100%;
+  height: 22vh;
+ background-image: url(../components/Images/Background.png);
+ background-size: cover;
+}
+.bv{
+  width: 100px;
+  height: 100px;
+  padding: 3px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.bv011{
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bv111{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.social{
+  padding: 5px 5px 3px 5px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+.bv111{
+ font-size: 46px;
+ color:rgb(255, 255, 255);
+ font-weight: 500;
+}
+.bv112{
+ font-size: 14px;
+ font-weight: 600;
+ border-radius: 40px;
+ color: #F1A240;
+ padding: 0px 16px;
+ background: #FFF5CE;
+ margin-top: 5px;
+}
+.jeva{
+ margin-top: 6px;
+ background-color: rgb(234, 182, 12);
+ padding: 3px 18px;
+ border-radius: 40%;
+}

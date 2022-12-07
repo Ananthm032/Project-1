@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
-import {Link} from "react-router-dom"
-import "../Styles/UserPage.css"
-import Card from '../Content/Main/Card/Card';
 import { useQuery, gql } from "@apollo/client";
+import { Link } from 'react-router-dom';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import {Box, Button} from "@mui/material"
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import "../Styles/UserPage.css"
 const HELL_QUERY = gql`
   {
     getAllUsers{
@@ -12,6 +13,10 @@ const HELL_QUERY = gql`
       userID
       username
       id
+      profilePic
+      walletAddress
+      ratings
+      totalFollowers
     }
     
    
@@ -19,19 +24,18 @@ const HELL_QUERY = gql`
 `;
 
 function About() {
-  
+
+ 
+ 
   const [category, setcategory] = React.useState('');
    const [user, setData] = useState(Object);
    const [term, setTerm] = useState("");
-  
-  
 
   const handleChange = (event) => {
     setcategory(event.target.value);
 
   };
-  const   {data,loading,error}   = useQuery(HELL_QUERY);
-   
+  const   {data,loading,error}   = useQuery(HELL_QUERY); 
     console.log(data,loading,error)
     const apiEndpoint = "https://api2.inocyx.com/graphql/";
     const query = `
@@ -39,6 +43,10 @@ function About() {
           searchUsers(displayName:$displayName){
             displayName
             userID
+             profilePic
+             walletAddress
+             ratings
+             totalFollowers
           }
         }
       `;
@@ -65,7 +73,7 @@ function About() {
         getData(term)
     }
     console.log("search", user);
-
+   
   return (
    
     <section class="tac">
@@ -85,11 +93,9 @@ function About() {
           displayEmpty
           inputProps={{ 'aria-label': 'Without label' }}
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
+         
           <MenuItem value={"userID"}>userID</MenuItem>
-          <MenuItem value={"displayName"}>displayName</MenuItem>
+          <MenuItem value={""}>displayName</MenuItem>
           <MenuItem value={"walletaddress"}>walletaddress</MenuItem>
         </Select>
   </div>
@@ -106,8 +112,6 @@ function About() {
                 onClick={onSearch}>Search
         </button>
      </>
-    
-
     </div>
  </div>
  </div>
@@ -116,21 +120,69 @@ function About() {
    <div className="yan">
   
    {user.data ? (
-        user.data?.searchUsers?.map((user ) => (
-            <Link to={`/user/address/${user.userID}`}> <Card user={user}/>  </Link>
+        user.data?.searchUsers?.map((Page) => ( 
+          <Link to={`/user/address/${Page.walletAddress}`}> 
+           <Box className="card">
+      <Box className='ver'>
+       <Box className="lag">
+       <img src={Page.profilePic}  width="100" height="100" ></img>
+       </Box>
+       <Button sx={{width:80,height:24,background:'#FFF5CE',borderRadius:40}}><p className='p'>ARTIST</p></Button>
+       <Box className='Creatername'>
+         <Box className='name'>
+         
+         
+          <Box>{Page.displayName}</Box>
+          
+         </Box>
+         <Box className='simble'>
+         <CheckCircleIcon />
+         </Box>
+       </Box>
+      
+         <Box className="bm">
+             <Box class="rating">4.8 rating</Box>
+             <Box class="create">Followers</Box>
+          </Box>
+        </Box>
+     </Box> </Link>
         ))
       ) : (
         <div className="yan">
-          {data?.getAllUsers?.map((user)=>{
-  return  <Link to={`/user/address/${user.userID}`} style={{textDecoration:'none',textDecorationColor:'none'}}> <Card user={user} /> </Link>
+          {data?.getAllUsers?.map((Page,index)=>{
+        
+  return  (  
+    <Link to={`/user/address/${Page.walletAddress}`}> 
+    <Box className="card">
+      <Box className='ver'>
+       <Box className="lag">
+       <img src={Page.profilePic}  width="100" height="100" ></img>
+       </Box>
+       <Button sx={{width:80,height:24,background:'#FFF5CE',borderRadius:40}}><p className='p'>ARTIST</p></Button>
+       <Box className='Creatername'>
+         <Box className='name'>
+         
+         
+          <Box>{Page.displayName}</Box>
+          
+         </Box>
+         <Box className='simble'>
+         <CheckCircleIcon />
+         </Box>
+       </Box>
+      
+         <Box className="bm">
+             <Box class="rating">4.8 rating</Box>
+             <Box class="create">Followers</Box>
+          </Box>
+        </Box>
+     </Box>
+    </Link>
+
+  ) 
  })}
         </div>
       )}
-
-
-
- 
-
 </div>
 
  </section>
