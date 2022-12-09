@@ -10,6 +10,10 @@ query GetUsers($walletAddress:String!){
     profilePic
     banner
     shortBio
+    twitter
+    instagram
+    linkedIn
+    facebook
 allNFTs{
     collectionID
   itemName

@@ -5,7 +5,9 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import {Box, Button} from "@mui/material"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import SearchIcon from '@mui/icons-material/Search';
 import "../Styles/UserPage.css"
+
 const HELL_QUERY = gql`
   {
     getAllUsers{
@@ -23,6 +25,9 @@ const HELL_QUERY = gql`
   }
 `;
 
+
+
+
 function About() {
 
  
@@ -30,13 +35,13 @@ function About() {
   const [category, setcategory] = React.useState('');
    const [user, setData] = useState(Object);
    const [term, setTerm] = useState("");
-
+  
   const handleChange = (event) => {
     setcategory(event.target.value);
 
   };
   const   {data,loading,error}   = useQuery(HELL_QUERY); 
-    console.log(data,loading,error)
+    console.log(data,loading,error,"page")
     const apiEndpoint = "https://api2.inocyx.com/graphql/";
     const query = `
       query SearchUsers($displayName:String!){
@@ -62,7 +67,7 @@ function About() {
       })
         .then((res) => res.json())
         .then((user) => setData(user))
-        .catch(console.error);
+        
     };
   
    
@@ -72,7 +77,7 @@ function About() {
     const onSearch = () =>{
         getData(term)
     }
-    console.log("search", user);
+    console.log("search", user,error);
    
   return (
    
@@ -87,32 +92,34 @@ function About() {
 <div className='select-1'>
 
 <Select
-         className='App'
+         className='Aep'
           value={category}
           onChange={handleChange}
           displayEmpty
           inputProps={{ 'aria-label': 'Without label' }}
         >
-         
+            <MenuItem value={""}>displayName</MenuItem>
           <MenuItem value={"userID"}>userID</MenuItem>
-          <MenuItem value={""}>displayName</MenuItem>
           <MenuItem value={"walletaddress"}>walletaddress</MenuItem>
         </Select>
   </div>
-  <div>
-  <>
+ 
+  <div  className='search-box'>
      <input 
-            placeholder="Enter the name..."
+            className='search-txt'
+            placeholder="Search..."
             type="text" 
             value={term}
             onChange={(event) => {onChange(event)}}
            
         />
-        <button type="button" className="searchButton" 
-                onClick={onSearch}>Search
-        </button>
-     </>
-    </div>
+        <p  className="search-btn" 
+                onClick={onSearch}>  
+                <SearchIcon />
+
+        </p>
+     </div>
+ 
  </div>
  </div>
  </div>
@@ -149,7 +156,7 @@ function About() {
         ))
       ) : (
         <div className="yan">
-          {data?.getAllUsers?.map((Page,index)=>{
+          {data?.getAllUsers?.map((Page)=>{
         
   return  (  
     <Link to={`/user/address/${Page.walletAddress}`}> 

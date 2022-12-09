@@ -10,14 +10,12 @@ import Product from './pages/Product.js';
 import ProductList from './pages/ProductList.js';
 import Topbar from './components/Topbar/Topbar';
 import UserAddress from './pages/UserAddress';
-import UserProfile from './pages/UserProfile';
-import { RoutingContext } from './Content/Routing/Routing';
-
+import Router from './Content/Routing/Routing';
 
 const App = () => {
   return (
    <>
-  
+  <Router>
       <Topbar/>
       <Sidebar>
         <Routes>
@@ -28,12 +26,10 @@ const App = () => {
           <Route path="/product" element={<Product />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/user/address/:walletAddress" element={<UserAddress />} />
-          <Route path="/user/profile" element={<UserProfile />} />
           <Route path="/productList" element={<ProductList />} />
         </Routes> 
-     </Sidebar>
-    
-
+       </Sidebar>
+      </Router>
       </>
   );
 };

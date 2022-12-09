@@ -2,9 +2,12 @@
 .scrool{
     width: 100%;
     height:100%;
-    overflow: hidden;
     overflow-y: scroll;
-   
+    scrollbar-width: none; 
+    -ms-overflow-style: none;   
+}
+.scrool::-webkit-scrollbar{
+    width: 0px;
 }
 .tope{
     display: flex;

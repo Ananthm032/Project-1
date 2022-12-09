@@ -1,16 +1,23 @@
 .ttp{
-    height: 40vh;
+    height: 35vh;
     width: 100%;
 }
 .botm2{
      display: flex;
      flex-wrap: wrap;
-     overflow: hidden;
      overflow-y: scroll;
+     scrollbar-width: none;
       gap: 20px;
       justify-content: center;
-      height: 50vh;
+      height: 45vh;
       
+}
+.botm2::-webkit-scrollbar{
+  width: 0px;
+}
+.bto{
+  width: 100%;
+  height: 55vh;
 }
 
 .address{
@@ -33,6 +40,10 @@
     background:#313131;
      border-radius: 4px;
      margin-left: 25px;
+}
+.lowe1{
+  width: 100%;
+  height: 10vh;
 }
 .wrapper {
     display: inline-flex;
@@ -179,7 +190,7 @@ object-fit: cover;
  .sheat{
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 225px;
   height: 275px;
   border-radius:4px ;
   background: #FFFFFF;
@@ -210,8 +221,153 @@ object-fit: cover;
   margin-left: 10px;
 }
 .tpsheat img{
-width: 200px;
+width: 225px;
 height: 200px;
 border-radius:5px ;
 
 } 
+
+
+
+#loader {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+@keyframes loader {
+  0% { left: -100px }
+  100% { left: 110%; }
+}
+#box {
+  width: 50px;
+  height: 50px;
+  background: #636fee;
+  animation: animate .5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
+@keyframes animate {
+  17% { border-bottom-right-radius: 3px; }
+  25% { transform: translateY(9px) rotate(22.5deg); }
+  50% {
+    transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+    border-bottom-right-radius: 40px;
+  }
+  75% { transform: translateY(9px) rotate(67.5deg); }
+  100% { transform: translateY(0) rotate(90deg); }
+} 
+#shadow { 
+  width: 50px;
+  height: 5px;
+  background: #000;
+  opacity: 0.1;
+  position: absolute;
+  top: 59px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow .5s linear infinite;
+}
+@keyframes shadow {
+  50% {
+    transform: scale(1.2,1);
+  }
+}
+
+
+
+body {
+  height: 100%;
+  width: 100vw;
+  cursor: pointer;
+
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide:nth-child(1) .panel > * {
+  background: #ffffff;
+  color: #7594f0;
+}
+.slide:nth-child(2) .panel > * {
+  background: #a8cb86;
+  color: #bdd194;
+}
+.slide .center {
+  opacity: 0;
+  transition: opacity linear 300ms;
+}
+.slide .panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide .top, .slide .bottom {
+  content: attr(data-back);
+  position: absolute;
+  font-size: 50vh;
+  font-weight: 800;
+  height: 50vh;
+  width: 100vw;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 3s cubic-bezier(1, 0.005, 0.57, 0.865);
+}
+.slide .top:after, .slide .bottom:after {
+  position: relative;
+  display: inline-block;
+  transition: transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865);
+  content: attr(data-back);
+  font-family: "BenchNine", sans-serif;
+}
+.slide .top {
+  line-height: 100vh;
+  transform: translatey(-50vh);
+}
+.slide .top:after {
+  transform: translatey(50vh);
+}
+.slide .bottom {
+  bottom: 0;
+  line-height: 0vh;
+  transform: translatey(50vh);
+
+}
+.slide .bottom:after {
+  transform: translatey(-50vh);
+ 
+}
+.slide.active .center {
+  opacity: 1;
+  transition: opacity linear 300ms;
+  transition-delay: 600ms;
+}
+.slide.active .top, .slide.active .bottom {
+  transition: none;
+  transform: translatey(0);
+  z-index: -1;
+}
+.slide.active .top:after, .slide.active .bottom:after {
+  transition: transform cubic-bezier(0.23, 1, 0.32, 1) 1200ms;
+  transform: translatey(0);
+}

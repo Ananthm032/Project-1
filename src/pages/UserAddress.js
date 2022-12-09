@@ -19,7 +19,29 @@ function UserAddress() {
   const {data,loading,error} =UseCharacter(walletAddress)
 
   if (error) return <div>something went Wrong</div>
-  if (loading) return <div>Spinner</div>
+  if (loading) return <div class="slider">
+  {loading? <div class="slide active">
+    <div class="panel">
+      <div class="top" ></div>
+      <div class="bottom"></div>
+    </div>
+    <div class="center">
+    <div id="loader">
+  <div id="shadow"></div>
+  <div id="box"></div>
+</div>
+    </div>
+  </div>:
+ <div class="slide">
+ <div class="panel">
+   <div class="top" ></div>
+   <div class="bottom"></div>
+ </div>
+ 
+</div>
+   }
+
+ </div>
 
   console.log(data)
   return (
@@ -75,25 +97,34 @@ function UserAddress() {
          </Box>
        </Box>
        <Box className="boat-1">
-        <Box className='social'><FacebookIcon /></Box>
-        <Box className='social'><InstagramIcon/></Box>
-        <Box className='social'><TwitterIcon/></Box>
-        <Box className='social'><LinkedInIcon/></Box>
+        <Box className='social'><a href={data?.getUser?.facebook} target="blank"><FacebookIcon/></a></Box>
+        <Box className='social'><a href={data?.getUser?.instagram} target="blank"><InstagramIcon/></a></Box>
+         <Box className='social'><a href={data?.getUser?.twitter} target="blank"><TwitterIcon/></a></Box>
+        <Box className='social'><a href={data?.getUser?.linkedIn} target="blank"><LinkedInIcon/></a></Box>
         </Box>
           </Box>
-            
-      
- 
               </Box>
 
   </div>
- 
+  <div className="bto">
+  <div className='lowe1'>
+    <div class="wrapper">
+      <input type="radio" name="select" id="one" checked/>
+      <input type="radio" name="select" id="two"/>
+      <label for="one" class="option option-1">
+        <span>Create</span>
+      </label>
+      <label for="two" class="option option-2">
+        <span>Owned</span>
+      </label>
+    </div>
+          </div>
     <div className='botm2' >
       
      {data?.getUser?.allNFTs?.map(nft=>{
       return(
         <div >
-          <Link to={`/user/profile`} className="no">
+          
           <Box className="sheat">
        <Box className="tpsheat">
           <img src={nft.itemImage} alt='sht' />
@@ -106,15 +137,15 @@ function UserAddress() {
           <Box  className='coin'>{nft.collectionID}</Box>
        </Box>
     </Box>
-    </Link>
+ 
     </div>
 
       )
      })}  
            
+       </div>
     </div>
-  
-</div>
+  </div>
   )
 }
   
