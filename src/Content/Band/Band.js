@@ -12,8 +12,9 @@ import "./Band.css"
 import { useQuery, gql } from "@apollo/client";
 
 const FILMS_QUERY = gql`
-  {
-    getAllUsers{
+ query GetAllUsers{
+  getAllUsers{
+     isCreatorApplicationInReview 
       username
       displayName
       userID
@@ -29,8 +30,9 @@ export default function ControlledAccordions() {
       setExpanded(isExpanded ? panel : false);
     };
     const { data, loading, error } = useQuery(FILMS_QUERY);
+    
     const [Loading,SetLoading]=useState(true)
-    useEffect(() => {
+     useEffect(() => {
       setTimeout(()=>{
         SetLoading(false);
       },5000)
@@ -44,7 +46,7 @@ export default function ControlledAccordions() {
     <div  className='scrool-1'>
       <div className='hiii'>
      
-       {data.getAllUsers.map((launch) => (
+       {data.getAllUsers.filter(launch =>launch.isCreatorApplicationInReview === true).map((launch) => (
      <div  key={launch.id}>
         <Box className='buc1'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -62,7 +64,7 @@ export default function ControlledAccordions() {
             {Loading ?     <Skeleton className='sk' 
           
           />  :
-        <p>{launch.id}</p>
+        <p>{launch.displayName}</p>
           }
         
            </Box>
@@ -88,7 +90,7 @@ export default function ControlledAccordions() {
             width={40}
             height={40}
             />  :
-          <p>{launch.username}</p>
+          <p>{launch.id}</p>
           
           }
   </Box>
@@ -101,10 +103,9 @@ export default function ControlledAccordions() {
             width={200}
             height={25}
             />  :
-          <p>{launch.userID}</p>
+          <p>ABOUT</p>
             }
           
-        
          </Box>
       <Box className='simple2'>  
       {Loading? <Skeleton variant='text'
@@ -140,7 +141,7 @@ export default function ControlledAccordions() {
          
             />  :
          
-  <p>{launch.username}</p>
+  <p>{launch.displayName}</p>
         }
         </Box>
           </Box>
@@ -172,7 +173,15 @@ height={15}
         
         <AccordionDetails>
 <Box className='sim'>
-       <Box className='sim1'> ABOUT</Box>
+<Box className='sim1'>
+       {Loading ?     <Skeleton variant="text" 
+            width={200}
+            height={25}
+            />  :
+          <p>ABOUT</p>
+            }
+          
+         </Box>
       <Box className='sim2'>  
         
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
