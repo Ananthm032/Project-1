@@ -11,6 +11,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useParams } from 'react-router-dom'
 import UseCharacter from '../Content/Hook/UseCharacter'
 import CheckCircle from '@mui/icons-material/CheckCircle'
+import Img from "../components/Images/Verified-1.png"
 import "../Styles/UserAddress.css"
 function UserAddress() {
 
@@ -63,12 +64,20 @@ function UserAddress() {
          </Box>
          <Box className="bv-1">
           <Box className='bv-11'>
-       
-           <Box>
+          <Box className='bv-0'>
          <Box  className="bv-111">
  {data?.getUser?.displayName}
          </Box>
-        
+        <Box className='bv-110'> 
+       <div>
+   {data?.getUser?.isKYCVerified === true ?
+  <div>
+<img src= {Img} width="25px" height="25px" alt=''></img>
+    </div>
+  :null
+  }
+   </div>
+        </Box>
          </Box>
          <Box className="bv-112">
          {data?.getUser?.username}

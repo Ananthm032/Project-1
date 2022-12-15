@@ -6,6 +6,7 @@ query GetUsers($walletAddress:String!){
     username
     walletAddress
     displayName
+    isKYCVerified
     userID
     profilePic
     banner

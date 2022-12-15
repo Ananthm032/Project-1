@@ -144,11 +144,11 @@
      justify-content: center;
      padding: 10px;
      object-fit: cover;
-    gap:5px;
+     gap:5px;
  }
  .bv-11{
  
-   line-height: 32px;
+   line-height:20px;
  }
  .bv121{
     display: flex;
@@ -170,8 +170,13 @@ object-fit: cover;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
  }
-
+.bv-0{
+display: flex;
+align-items:baseline;
+gap: 8px;
+}
  .bv-111{
+  
    font-size: 46px;
    color:rgb(0, 0, 0);
    font-weight: 500;
