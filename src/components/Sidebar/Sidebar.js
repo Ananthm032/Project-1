@@ -34,8 +34,8 @@ const Side = ({children}) => {
             icon:<Person4Icon/>
         },
         {
-            path:"/comment",
-            name:"Comment",
+            path:"/celebrityNFT",
+            name:"CelebrityNFT",
             icon:<AddBoxIcon/>
         },
         {

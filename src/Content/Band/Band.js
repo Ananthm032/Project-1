@@ -19,7 +19,12 @@ const FILMS_QUERY = gql`
       displayName
       userID
       id
-      
+      email
+      twitter
+      telegram
+    behance
+    linkedIn
+    instagram
     }
   }
 `;
@@ -190,25 +195,25 @@ height={15}
    <Box className='link'> 
  <Box className='mail'>
  <h4>EMAIL ADDRESS</h4>
-  <h5>creaters@mail.com</h5>
+  <h5>{launch.email}</h5>
    </Box>
    <Box className='twitter'>
    <h4>TWITTER HANDLE</h4>
-   <h5 >https://twitter.com/elonmusk</h5>
+   <h5 >{launch.twitter}</h5>
    </Box>
    <Box className='insta'>
    <h4>INSTAGRAM HANDLE</h4>
    <h5 >
-https://www.instagram.com/kalsdkmfklasmdklfmklsadmfklmlaksfmklmsdklfmksdmlf
+{launch.instagram}
 </h5>
 </Box>
 <Box className='dribble'>
-   <h4>DRIBBBLE HANDLE</h4>
-   <h5 >https://dribbble.com/shots/18551776-Damascus-Techwear-Apparel-2022-web-redesign-concept</h5>
+   <h4>TELEGRAM HANDLE</h4>
+   <h5 >{launch.telegram}</h5>
    </Box>
    <Box className='behance'>
    <h4>BEHANCE HANDLE</h4>
-   <h5 >https://www.behance.net/gallery/119045577/DE_FORM?tracking_source=for_you_feed_featured_category</h5>
+   <h5 >{launch.behance}</h5>
    </Box>
    </Box>
    <Comment/>

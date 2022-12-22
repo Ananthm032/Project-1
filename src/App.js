@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar"
 import Dashboard from './pages/Dashboard.js';
 import UserPage from "./pages/UserPage"
 import Analytics from './pages/Analytics.js';
-import Comment from './pages/Comment.js';
+import CelebrityNFT from "./pages/CelebrityNFT"
 import Product from './pages/Product.js';
 import ProductList from './pages/ProductList.js';
 import Topbar from './components/Topbar/Topbar';
@@ -21,7 +21,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />}/>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/comment" element={<Comment />} />
+          <Route path="/celebrityNFT" element={<CelebrityNFT />} />
           <Route path="/analytic" element={<Analytics />} />
           <Route path="/product" element={<Product />} />
           <Route path="/user" element={<UserPage />} />

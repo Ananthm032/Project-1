@@ -10,14 +10,14 @@ function Topbar() {
    
    <div className='box'>
    <div>
-    <img src={Logo} width="150px" height="40px"></img>
+    <img src={Logo} width="150px" height="40px" alt='logo'></img>
    </div>
   <div ><p>Admin</p>
   </div> 
    </div>
    <div >
     <div>
-      <img src='https://cdn3.iconfinder.com/data/icons/user-group-black/100/user-upload-512.png' width="40px" height="40px">
+      <img src='https://cdn3.iconfinder.com/data/icons/user-group-black/100/user-upload-512.png' width="40px" height="40px" alt='logout'>
       </img>
     </div>
    </div>

@@ -6,8 +6,7 @@ import Boom from '../../Content/Boom/Boom'
 function Verified() {
     const{ setPage } = useContext(RoutingContext);
   return (
-    <section class="conten">
-     
+    <section className="conten">
      
     <Box className='min'>
     <Box  className='min1'style={{width:'100%',textDecoration:'none',cursor:'pointer',padding:"15px"}}  onClick={() => setPage(pagesMapping.sidebar)}>

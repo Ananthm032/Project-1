@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import Routing from "./Content/Routing/Routing"
+
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import App from './App';
 
@@ -15,16 +15,12 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  
-  <React.StrictMode>
-   
-<BrowserRouter>
-
+    <React.StrictMode>
+  <BrowserRouter>
 <ApolloProvider client={client}>
-<App/>
+  <App/>
 </ApolloProvider>
-
-</BrowserRouter>
-
-  </React.StrictMode>
+  </BrowserRouter>
+     </React.StrictMode>
  
 );

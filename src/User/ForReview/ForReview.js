@@ -6,7 +6,7 @@ import "./ForReview.css"
 function ForReview() {
     const{ setPage } = useContext(RoutingContext);
   return (
-    <section class="content">
+    <section className="content">
     
     <Box className='mini'>
 <Box   className='mini1' style={{width:'100%',textDecoration:'none',cursor:'pointer',padding:"15px"}} >

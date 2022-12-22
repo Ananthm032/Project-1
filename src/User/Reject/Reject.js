@@ -6,7 +6,7 @@ import "./Reject.css"
 function Reject() {
     const{ setPage } = useContext(RoutingContext);
   return (
-    <section class="conte">
+    <section className="conte">
      
     <Box className='mi'>
    <Box className='mi1'  style={{width:'100%',textDecoration:'none',cursor:'pointer',padding:"15px"}} onClick={() => setPage(pagesMapping.sidebar)} >

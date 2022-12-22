@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
-import {Typography, Box, Button} from '@mui/material';
+import {Typography, Box} from '@mui/material';
 import "./Comment.css"
 
 
@@ -12,7 +12,7 @@ const style = {
   width: 900,
   bgcolor: 'background.paper',
   border: '0.5px solid ',
- border:'white',
+  borderColor:'white',
  borderRadius:'10px',
   boxShadow: 24,
   p: 4,
@@ -53,7 +53,7 @@ export default function SimpleBackdrop() {
           <Typography id="keep-mounted-modal-description" sx={{ mt: 50, alignContent:"center",justifyContent:"center"}}>
          
           </Typography>
-         <h1 onClick={handleClose} className="Button">Click</h1>
+         <h1 onClick={handleClose} className="Button">Sumbit</h1>
         </Box>
       </Backdrop>
     </div>

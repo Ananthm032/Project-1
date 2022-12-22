@@ -6,6 +6,7 @@ import Select from '@mui/material/Select';
 import {Box, Button} from "@mui/material"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SearchIcon from '@mui/icons-material/Search';
+import Img from "../components/Images/anime cartton.png"
 import "../Styles/UserPage.css"
 
 const HELL_QUERY = gql`
@@ -48,6 +49,7 @@ function About() {
           searchUsers(displayName:$displayName){
             displayName
             userID
+            id
              profilePic
              walletAddress
              ratings
@@ -81,10 +83,10 @@ function About() {
    
   return (
    
-    <section class="tac">
+    <section className="tac">
  
       <div className="yat">
- <div class="items">
+ <div className="items">
  <div>
 <h1>Inocyx Members(201)</h1>
 </div>
@@ -128,11 +130,15 @@ function About() {
   
    {user.data ? (
         user.data?.searchUsers?.map((Page) => ( 
-          <Link to={`/user/address/${Page.walletAddress}`}> 
+          <Link to={`/user/address/${Page.walletAddress}`} key={Page.id}> 
            <Box className="card">
       <Box className='ver'>
        <Box className="lag">
-       <img src={Page.profilePic}  width="100" height="100" ></img>
+
+        {Page.profilePic ? 
+       <img src={Page.profilePic}  width="100" height="100" alt=''></img>
+       : <img src={Img} width="100" height="100" alt=''/>
+        }
        </Box>
        <Button sx={{width:80,height:24,background:'#FFF5CE',borderRadius:40}}><p className='p'>ARTIST</p></Button>
        <Box className='Creatername'>
@@ -148,8 +154,8 @@ function About() {
        </Box>
       
          <Box className="bm">
-             <Box class="rating">4.8 rating</Box>
-             <Box class="create">Followers</Box>
+             <Box className="rating">4.8 rating</Box>
+             <Box className="create">Followers</Box>
           </Box>
         </Box>
      </Box> </Link>
@@ -159,11 +165,15 @@ function About() {
           {data?.getAllUsers?.map((Page)=>{
         
   return  (  
-    <Link to={`/user/address/${Page.walletAddress}`}> 
+    <Link to={`/user/address/${Page.walletAddress}`} key={Page.id}> 
     <Box className="card">
       <Box className='ver'>
        <Box className="lag">
-       <img src={Page.profilePic}  width="100" height="100" ></img>
+    
+       {Page.profilePic ? 
+       <img src={Page.profilePic}  width="100" height="100" alt=''></img>
+       : <img src={Img} width="100" height="100" alt=''/>
+        }
        </Box>
        <Button sx={{width:80,height:24,background:'#FFF5CE',borderRadius:40}}><p className='p'>ARTIST</p></Button>
        <Box className='Creatername'>
@@ -179,8 +189,8 @@ function About() {
        </Box>
       
          <Box className="bm">
-             <Box class="rating">4.8 rating</Box>
-             <Box class="create">Followers</Box>
+             <Box className="rating">4.8 rating</Box>
+             <Box className="create">Followers</Box>
           </Box>
         </Box>
      </Box>

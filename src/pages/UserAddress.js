@@ -12,6 +12,8 @@ import { useParams } from 'react-router-dom'
 import UseCharacter from '../Content/Hook/UseCharacter'
 import CheckCircle from '@mui/icons-material/CheckCircle'
 import Img from "../components/Images/Verified-1.png"
+import Img1 from "../components/Images/anime cartton.png"
+import Img2 from "../components/Images/Background.png"
 import "../Styles/UserAddress.css"
 function UserAddress() {
 
@@ -20,23 +22,23 @@ function UserAddress() {
   const {data,loading,error} =UseCharacter(walletAddress)
 
   if (error) return <div>something went Wrong</div>
-  if (loading) return <div class="slider">
-  {loading? <div class="slide active">
-    <div class="panel">
-      <div class="top" ></div>
-      <div class="bottom"></div>
+  if (loading) return <div className="slider">
+  {loading? <div className="slide active">
+    <div className="panel">
+      <div className="top" ></div>
+      <div className="bottom"></div>
     </div>
-    <div class="center">
+    <div className="center">
     <div id="loader">
   <div id="shadow"></div>
   <div id="box"></div>
 </div>
     </div>
   </div>:
- <div class="slide">
- <div class="panel">
-   <div class="top" ></div>
-   <div class="bottom"></div>
+ <div className="slide">
+ <div className="panel">
+   <div className="top" ></div>
+   <div className="bottom"></div>
  </div>
  
 </div>
@@ -50,7 +52,11 @@ function UserAddress() {
            <div className="address" >
           <div className="ttp">
    <Box className="total1">
-   <img src={data?.getUser?.banner} className="back"/>
+{data?.getUser?.banner ? 
+   <img src={data?.getUser?.banner} className="back" alt=""/>
+       :   <img src={Img2}  alt="" className="back"/>
+
+}
     <Box className="tpp-1">
       <Box className="password">
     <Link to='/user'><KeyboardBackspaceIcon sx={{color:'whitesmoke'}} /></Link>
@@ -60,7 +66,10 @@ function UserAddress() {
     <Box className="btt-1">
        <Box className="boat1">
           <Box className="bv">
-          <img src= {data?.getUser?.profilePic}/>
+            {data?.getUser?.profilePic ? 
+          <img src= {data?.getUser?.profilePic} alt='' />
+          :<img src={Img1} alt=""/>
+            }
          </Box>
          <Box className="bv-1">
           <Box className='bv-11'>
@@ -117,13 +126,13 @@ function UserAddress() {
   </div>
   <div className="bto">
   <div className='lowe1'>
-    <div class="wrapper">
+    <div className="wrapper">
       <input type="radio" name="select" id="one" checked/>
       <input type="radio" name="select" id="two"/>
-      <label for="one" class="option option-1">
+      <label for="one" className="option option-1">
         <span>Create</span>
       </label>
-      <label for="two" class="option option-2">
+      <label for="two" className="option option-2">
         <span>Owned</span>
       </label>
     </div>

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: imported;
+   
+}
+
 .button{
       
       display: flex;
@@ -73,12 +78,18 @@
      
 }
 .Button{
-   background-color: rgb(54, 140, 220);
+   background-image: linear-gradient(0deg, #fece00 0%, #ffe172 100%);
    color: rgb(47, 52, 57);
    width: 15%;
-   border-radius: 10px;
+   border-radius: 4px;
+   font-family: imported;
    padding: 5px;
    text-align: center;
    cursor: pointer;
    margin-left: 400px;
+  
+}
+.Button:hover{
+    color: white;
+   
 }
