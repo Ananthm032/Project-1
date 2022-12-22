@@ -42,27 +42,21 @@
 }
 .info-mid h1{
   position: relative;
-  width: 125px;
-  height: 125px;
+  background-image: url("../components/Images/Background.png");
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   top: -5rem;
   left: 3rem;
-  border: 5px solid white;
+  border: 2px solid gray;
 }
 .img-1{
-     width: 128px;
-     height: 128px;
+     width: 130px;
+     height: 130px;
+      object-fit: cover;
      border-radius: 50%;
-     object-fit: cover;
 }
-.form-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 21vh;
-    align-items: center;
-}
-.compose{
-    height:25.3vh;
-}
+
+
+
 

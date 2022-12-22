@@ -35,7 +35,7 @@ function CelebrityNFT() {
 <h1>
 <form  className='form-1' action=""
   onClick={ ()=> document.querySelector(".input-field1").click()}>
-    <input type="file" accept='image/*'  className='input-field1'   hidden style={{width:"200px" , height:"200px",border:"2px solid red"}}
+    <input type="file" accept='image/*'  className='input-field1' hidden
     
     onChange={({target :{files}})=>{
       files[0] && setFileName1(files[0].name)
@@ -45,12 +45,8 @@ function CelebrityNFT() {
     }}
 />
   {image ? <img src={image1}  className='img-1'  alt={fileName1}/> : 
-  
-  <div className='compose'>
-    <img src={Img} alt="" width="150px" height="150px"/>
-    </div>
-     
-    }
+""
+    } 
   </form>
 </h1>
   </div>
